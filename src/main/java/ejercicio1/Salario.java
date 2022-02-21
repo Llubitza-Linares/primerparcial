@@ -1,7 +1,7 @@
 package ejercicio1;
 
 public class Salario {
-    public int DevSalario (int sueldo) throws Exception{
+    public int descuento (int sueldo) throws Exception{
         if (sueldo > 0 && sueldo <= 2000){
             return sueldo;
         }else if(sueldo>2000 && sueldo<=4000){

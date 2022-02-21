@@ -23,11 +23,16 @@ public class SalarioTest {
 
     })
 
-    public void descuentoSalario(int sueldo, int expectedResult)throws Exception{
-        Salario salario=new Salario();
+    public void descuentoTest(int s,int expectedResult) throws Exception {
+        Salario salario = new Salario();
 
-        if(sueldo<=0){
-            Assertions.assertThrows(Exception.class, ()->salario.descuento(salario))
+        if(s<=0) {
+            Assertions.assertThrows(Exception.class, ()-> {salario.descuento(s);} );
+        }else {
+            int actualResult = salario.descuento(s);
+            Assertions.assertEquals(expectedResult,actualResult,"ERROR! El descuento es incorrecto");
         }
+
+
     }
 }
